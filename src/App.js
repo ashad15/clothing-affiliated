@@ -1,10 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HomePage from "./pages/homepage";
+import "./scss/App.scss";
+import {Route, Switch} from 'react-router'
+
+
+function Hats() {
+  return(
+    <div>
+      hats
+    </div>
+  )
+}
 
 function App() {
   return (
-    <div >
-     hey ashad a
+    <div>
+    <Switch>
+      <Route exact path ='/' component = {HomePage}/>
+      <Route exact path = '/hats' component = {Hats}/>
+    </Switch>
     </div>
   );
 }
